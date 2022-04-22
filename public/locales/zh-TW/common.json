@@ -1,0 +1,17 @@
+{
+  "lang": {
+    "title": "English"
+  },
+  "document": {
+    "items": [
+      {
+        "name": "項目 1",
+        "description": "第 1 個項目"
+      },
+      {
+        "name": "項目 2",
+        "description": "第 2 個項目"
+      }
+    ]
+  }
+}

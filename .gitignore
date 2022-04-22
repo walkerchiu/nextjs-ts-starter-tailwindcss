@@ -1,0 +1,101 @@
+
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# Support for Project snippet scope
+
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
+
+
+######################### CUSTOM/MANUAL #############################
+
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# IDE plugins
+.idea/markdown-navigator*/**
+
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+.webpack
+.next
+dist
+
+.DS_Store
+.sls-simulate-registry
+
+# Builds
+build
+.firebase
+coverage/
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# Next.js environment variables - See https://nextjs.org/docs/basic-features/environment-variables#exposing-environment-variables
+.env.build
+.env*.local
+!.env*.example
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# cypress - tmp files
+cypress/screenshots
+cypress/videos
+
+# svg compiled into js files
+src/svg/*.js
+src/svg/*.tsx
+
+# Vercel
+.now
+.vercel
+
+# Jekyll - Github Pages
+_site
+.sass-cache
+.jekyll-metadata
+
+# Tmp files (cache, etc.)
+*.cache
+
+# Storybook
+storybook-static/
+
+# Jest
+.jest-test-results.json
