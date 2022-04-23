@@ -8,21 +8,23 @@ interface IndexProps {
   description: string;
 }
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcherPage2() {
   const router = useRouter();
   const { t } = useTranslation("common");
 
   return (
     <>
-      <Link
-        href={router.pathname}
-        locale={router.locale === "en-US" ? "zh-TW" : "en-US"}
-        passHref
-      >
-        <a>Switch to {t("lang.title")}</a>
-      </Link>
+      <section style={{ textAlign: 'right' }}>
+        <Link
+          href={router.pathname}
+          locale={router.locale === "en-US" ? "zh-TW" : "en-US"}
+        >
+          <a>Switch to <strong>{t("lang.title")}</strong></a>
+        </Link>
+      </section>
       <hr/>
       <section>
+        <header style={{ textAlign: 'center' }}>Page 2</header>
         {t<string, IndexProps[]>("document.items", { returnObjects: true }).map(
           ({ name, description }, index: number) => (
             <article key={index}>
@@ -31,6 +33,21 @@ export default function LanguageSwitcher() {
             </article>
           )
         )}
+      </section>
+      <hr/>
+      <section style={{ textAlign: 'center' }}>
+        Pagination:{' '}
+        <Link
+          href="/examples/next-i18next-page1"
+        >
+          <a>1</a>
+        </Link>
+        {', '}
+        <Link
+          href="/examples/next-i18next-page2"
+        >
+          <a>2</a>
+        </Link>
       </section>
     </>
   );

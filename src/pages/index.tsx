@@ -58,6 +58,18 @@ const Home: NextPage = () => {
         <section className={styles.board}>
           <header>Example</header>
           <article>
+            <h2>next-i18next</h2>
+            <ol style={{ listStyleType: "number" }}>
+              <li>
+                <a
+                  href="/examples/next-i18next-page1"
+                >
+                  next-i18next
+                </a>
+              </li>
+            </ol>
+          </article>
+          <article>
             <h2>Emotion</h2>
             <ol style={{ listStyleType: "number" }}>
               <li>
@@ -72,18 +84,6 @@ const Home: NextPage = () => {
                   href="/examples/emotion-styled"
                 >
                   emotion-styled
-                </a>
-              </li>
-            </ol>
-          </article>
-          <article>
-            <h2>i18n</h2>
-            <ol style={{ listStyleType: "number" }}>
-              <li>
-                <a
-                  href="/examples/i18n"
-                >
-                  language switcher
                 </a>
               </li>
             </ol>
