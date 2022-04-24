@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Link from "next/link";
 import styles from '../app/styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -61,11 +62,11 @@ const Home: NextPage = () => {
             <h2>next-i18next</h2>
             <ol style={{ listStyleType: "number" }}>
               <li>
-                <a
+                <Link
                   href="/examples/next-i18next-page1"
                 >
-                  next-i18next
-                </a>
+                  <a>next-i18next</a>
+                </Link>
               </li>
             </ol>
           </article>
@@ -73,18 +74,18 @@ const Home: NextPage = () => {
             <h2>Emotion</h2>
             <ol style={{ listStyleType: "number" }}>
               <li>
-                <a
+                <Link
                   href="/examples/emotion-react"
                 >
-                  emotion-react
-                </a>
+                  <a>emotion-react</a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/examples/emotion-styled"
                 >
-                  emotion-styled
-                </a>
+                  <a>emotion-styled</a>
+                </Link>
               </li>
             </ol>
           </article>
