@@ -1,7 +1,7 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import type { NextPage } from 'next';
+import Head from 'next/head';
 import Link from "next/link";
-import styles from '../app/styles/Home.module.css'
+import styles from '../app/styles/Home.module.css';
 
 const Home: NextPage = () => {
   return (
@@ -66,6 +66,18 @@ const Home: NextPage = () => {
                   href="/examples/next-i18next-page1"
                 >
                   <a>next-i18next</a>
+                </Link>
+              </li>
+            </ol>
+          </article>
+          <article>
+            <h2>next-seo</h2>
+            <ol style={{ listStyleType: "number" }}>
+              <li>
+                <Link
+                  href="/examples/next-seo"
+                >
+                  <a>next-seo</a>
                 </Link>
               </li>
             </ol>

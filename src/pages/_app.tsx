@@ -1,13 +1,24 @@
-import '../app/styles/globals.css'
-import type { AppProps } from 'next/app'
+import '../app/styles/globals.css';
+import type { ReactElement, ReactNode } from 'react'
+import type { NextPage } from 'next'
+import type { AppProps } from 'next/app';
 import { appWithTranslation } from "next-i18next";
-import NProgress from 'nprogress'
-import '../app/styles/nprogress.css'
-import { useEffect } from 'react';
-import { useRouter } from 'next/router'
+import SEO from '../../next-seo.config';
+import { DefaultSeo } from 'next-seo';
+import NProgress from 'nprogress';
+import '../app/styles/nprogress.css';
+import { useEffect } from 'react'
+import { useRouter } from 'next/router';
 
+type NextPageWithLayout = NextPage & {
+  getLayout?: (page: ReactElement) => ReactNode
+}
 
-function MyApp({ Component, pageProps }: AppProps) {
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout
+}
+
+function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const router = useRouter()
 
   useEffect(() => {
@@ -30,7 +41,24 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }, [router])
 
-  return <Component {...pageProps} />
+  const getLayout = Component.getLayout ?? ((page) => page)
+
+  return getLayout(
+    <>
+      <DefaultSeo
+        {...SEO}
+        dangerouslySetAllPagesToNoFollow={
+          router.pathname === '/dangerously/nofollow' ||
+          router.pathname === '/dangerously/nofollow-and-noindex'
+        }
+        dangerouslySetAllPagesToNoIndex={
+          router.pathname === '/dangerously/noindex' ||
+          router.pathname === '/dangerously/nofollow-and-noindex'
+        }
+      />
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default appWithTranslation(MyApp);
