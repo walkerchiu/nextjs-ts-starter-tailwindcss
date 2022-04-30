@@ -13,10 +13,10 @@ const Header: FC<ComponentProps> = ({
     <section
       role="navigation"
       aria-label="Main"
-      className="w-full my-5 px-5 xl:px-10 py-5 flex flex-col xl:flex-row items-start xl:items-center justify-between shadow rounded"
+      className="my-5 px-5 xl:px-10 py-5 flex flex-col xl:flex-row items-start xl:items-center justify-between shadow rounded"
     >
       <div
-        className="mb-4 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0 lg:w-1/2"
+        className="mb-4 lg:w-1/2"
       >
         <p
           className="focus:outline-none text-2xl font-bold"
@@ -31,7 +31,7 @@ const Header: FC<ComponentProps> = ({
       </div>
       <div
         role="list"
-        className="flex items-center lg:mt-6 xl:mt-0"
+        className="flex items-center"
       >
         <Link
           href="/"

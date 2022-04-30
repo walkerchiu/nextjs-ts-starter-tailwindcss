@@ -9,7 +9,7 @@ const ExampleHome: FC<ComponentProps> = ({
 }) => {
   return (
     <main
-      className='container'
+      className='w-full'
     >
       { children }
     </main>
