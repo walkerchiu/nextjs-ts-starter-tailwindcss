@@ -1,4 +1,5 @@
 import Link from "next/link";
+import React from 'react';
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -13,7 +14,7 @@ export default function LanguageSwitcherPage1() {
   const { t } = useTranslation("common");
 
   return (
-    <>
+    <React.Fragment>
       <section style={{ textAlign: 'right' }}>
         <Link
           href={router.pathname}
@@ -49,7 +50,7 @@ export default function LanguageSwitcherPage1() {
           <a>2</a>
         </Link>
       </section>
-    </>
+    </React.Fragment>
   );
 }
 

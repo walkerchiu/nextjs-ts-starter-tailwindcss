@@ -1,9 +1,9 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 
-import type { NextPage } from 'next'
-import React from 'react'
-import { jsx, css } from '@emotion/react'
+import type { NextPage } from 'next';
+import React from 'react';
+import { jsx, css } from '@emotion/react';
 
 const color = 'white'
 
@@ -30,7 +30,7 @@ const style2 = css({
 
 const EmotionReact: NextPage = () => {
   return (
-    <>
+    <React.Fragment>
       <div css={ style1 }>
         Hover to change color.
       </div>
@@ -61,7 +61,7 @@ const EmotionReact: NextPage = () => {
       }}>
         Hover to change color.
       </div>
-    </>
+    </React.Fragment>
   );
 }
 

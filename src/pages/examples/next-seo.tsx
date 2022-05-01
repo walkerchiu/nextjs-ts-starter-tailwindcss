@@ -1,11 +1,12 @@
 import type { ReactElement } from 'react';
+import React from 'react';
 import { NextSeo } from 'next-seo';
 import ExampleHome from '../../layouts/examples/ExampleHome';
 import Header from '../../modules/examples/Header';
 import Footer from '../../modules/examples/Footer';
 
 const SEOArticle = () => (
-  <>
+  <React.Fragment>
     <NextSeo
       title="Article Page Title"
       description="Description of article page"
@@ -78,7 +79,7 @@ const SEOArticle = () => (
         </li>
       </ol>
     </Footer>
-  </>
+  </React.Fragment>
 );
 
 SEOArticle.getLayout = function getLayout(page: ReactElement) {
