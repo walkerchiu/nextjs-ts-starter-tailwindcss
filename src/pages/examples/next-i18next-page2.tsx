@@ -3,6 +3,8 @@ import React from 'react';
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Header from '../../modules/examples/Header';
+import Footer from '../../modules/examples/Footer';
 
 interface IndexProps {
   name: string;
@@ -15,7 +17,8 @@ export default function LanguageSwitcherPage2() {
 
   return (
     <React.Fragment>
-      <section style={{ textAlign: 'right' }}>
+      <Header />
+      <section style={{ textAlign: 'right', paddingRight: '20px' }}>
         <Link
           href={router.pathname}
           locale={router.locale === "en-US" ? "zh-TW" : "en-US"}
@@ -23,7 +26,9 @@ export default function LanguageSwitcherPage2() {
           <a>Switch to <strong>{t("lang.title")}</strong></a>
         </Link>
       </section>
-      <hr/>
+      <hr
+        style={{ margin: '20px 0' }}
+      />
       <section>
         <header style={{ textAlign: 'center' }}>Page 2</header>
         {t<string, IndexProps[]>("document.items", { returnObjects: true }).map(
@@ -35,7 +40,9 @@ export default function LanguageSwitcherPage2() {
           )
         )}
       </section>
-      <hr/>
+      <hr
+        style={{ margin: '20px 0' }}
+      />
       <section style={{ textAlign: 'center' }}>
         Pagination:{' '}
         <Link
@@ -50,6 +57,19 @@ export default function LanguageSwitcherPage2() {
           <a>2</a>
         </Link>
       </section>
+      <Footer>
+        <ol style={{ listStyleType: "number" }}>
+          <li>
+            next-i18next:<br />
+            <a
+              href="https://github.com/isaachinman/next-i18next"
+              target="_blank"
+            >
+              https://github.com/isaachinman/next-i18next
+            </a>
+          </li>
+        </ol>
+      </Footer>
     </React.Fragment>
   );
 }

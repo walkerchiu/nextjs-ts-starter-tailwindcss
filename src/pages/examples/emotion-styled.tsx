@@ -1,19 +1,21 @@
 import type { NextPage } from 'next';
 import React, { FC } from 'react';
 import styled from '@emotion/styled';
+import Header from '../../modules/examples/Header';
+import Footer from '../../modules/examples/Footer';
 
 interface ComponentProps {
-  className?: string
-  label: string
+  className?: string,
+  label: string,
 }
 
 const Component: FC<ComponentProps> = ({
+  className,
   label,
-  className
 }) => <div className={className}>{label}</div>
 
 interface StyledComponentProps {
-  bgColor: string
+  bgColor: string,
 }
 
 const StyledComponent0 = styled(Component)<StyledComponentProps>`
@@ -38,6 +40,7 @@ const StyledComponent1 = styled(Component)<StyledComponentProps>(
 const EmotionStyledComponent: NextPage = () => {
   return (
     <React.Fragment>
+      <Header />
       <StyledComponent0
         bgColor="red"
         label="Component 0"
@@ -46,6 +49,19 @@ const EmotionStyledComponent: NextPage = () => {
         bgColor="red"
         label="Component 1"
       />
+      <Footer>
+        <ol style={{ listStyleType: "number" }}>
+          <li>
+            Emotion:<br />
+            <a
+              href="https://emotion.sh/docs/styled"
+              target="_blank"
+            >
+              https://emotion.sh/docs/styled
+            </a>
+          </li>
+        </ol>
+      </Footer>
     </React.Fragment>
   )
 }

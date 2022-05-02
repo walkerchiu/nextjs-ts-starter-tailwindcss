@@ -4,8 +4,10 @@
 import type { NextPage } from 'next';
 import React from 'react';
 import { jsx, css } from '@emotion/react';
+import Header from '../../modules/examples/Header';
+import Footer from '../../modules/examples/Footer';
 
-const color = 'white'
+const color = 'white';
 
 const style1 = css`
   background-color: hotpink;
@@ -31,10 +33,15 @@ const style2 = css({
 const EmotionReact: NextPage = () => {
   return (
     <React.Fragment>
-      <div css={ style1 }>
+      <Header />
+      <div
+        css={ style1 }
+      >
         Hover to change color.
       </div>
-      <div css={ style2 }>
+      <div
+        css={ style2 }
+      >
         Hover to change color.
       </div>
       <div
@@ -50,17 +57,32 @@ const EmotionReact: NextPage = () => {
       >
         Hover to change color.
       </div>
-      <div css={{
-        backgroundColor: 'hotpink',
-        padding: '32px',
-        cursor: 'pointer',
-        '&:hover': {
-          fontWeight: 'bold',
-          color: color,
+      <div
+        css={{
+          backgroundColor: 'hotpink',
+          padding: '32px',
+          cursor: 'pointer',
+          '&:hover': {
+            fontWeight: 'bold',
+            color: color,
+          }
         }
-      }}>
+      }>
         Hover to change color.
       </div>
+      <Footer>
+        <ol style={{ listStyleType: "number" }}>
+          <li>
+            Emotion:<br />
+            <a
+              href="https://emotion.sh/docs/css-prop"
+              target="_blank"
+            >
+              https://emotion.sh/docs/css-prop
+            </a>
+          </li>
+        </ol>
+      </Footer>
     </React.Fragment>
   );
 }
