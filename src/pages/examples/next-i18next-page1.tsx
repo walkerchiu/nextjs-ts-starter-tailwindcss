@@ -64,6 +64,7 @@ export default function LanguageSwitcherPage1() {
             <a
               href="https://github.com/isaachinman/next-i18next"
               target="_blank"
+              rel="noreferrer noopener"
             >
               https://github.com/isaachinman/next-i18next
             </a>

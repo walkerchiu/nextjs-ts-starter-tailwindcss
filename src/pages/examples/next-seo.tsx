@@ -73,6 +73,7 @@ const SEOArticle = () => (
           <a
             href="https://github.com/garmeeh/next-seo"
             target="_blank"
+            rel="noreferrer noopener"
           >
             https://github.com/garmeeh/next-seo
           </a>

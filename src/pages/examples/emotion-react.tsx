@@ -77,6 +77,7 @@ const EmotionReact: NextPage = () => {
             <a
               href="https://emotion.sh/docs/css-prop"
               target="_blank"
+              rel="noreferrer noopener"
             >
               https://emotion.sh/docs/css-prop
             </a>

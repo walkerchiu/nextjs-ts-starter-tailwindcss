@@ -56,6 +56,7 @@ const EmotionStyledComponent: NextPage = () => {
             <a
               href="https://emotion.sh/docs/styled"
               target="_blank"
+              rel="noreferrer noopener"
             >
               https://emotion.sh/docs/styled
             </a>
