@@ -1,5 +1,5 @@
 import '../app/styles/globals.css';
-import type { ReactElement, ReactNode } from 'react';
+import type { ReactElement } from 'react';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import { appWithTranslation } from "next-i18next";
@@ -12,7 +12,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 type NextPageWithLayout = NextPage & {
-  getLayout?: (page: ReactElement) => ReactNode
+  getLayout?: (page: ReactElement) => JSX.Element
 }
 
 type AppPropsWithLayout = AppProps & {
