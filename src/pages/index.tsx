@@ -83,6 +83,18 @@ const Home: NextPage = () => {
             </ol>
           </article>
           <article>
+            <h2>xstate</h2>
+            <ol style={{ listStyleType: "number" }}>
+              <li>
+                <Link
+                  href="/examples/xstate"
+                >
+                  <a>xstate</a>
+                </Link>
+              </li>
+            </ol>
+          </article>
+          <article>
             <h2>Emotion</h2>
             <ol style={{ listStyleType: "number" }}>
               <li>
