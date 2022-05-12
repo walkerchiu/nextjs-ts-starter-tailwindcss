@@ -2,7 +2,6 @@
 /** @jsx jsx */
 
 import type { NextPage } from 'next';
-import React from 'react';
 import { jsx, css } from '@emotion/react';
 import Header from '../../modules/examples/Header';
 import Footer from '../../modules/examples/Footer';
@@ -32,46 +31,54 @@ const style2 = css({
 
 const EmotionReact: NextPage = () => {
   return (
-    <React.Fragment>
+    <div
+      className="flex flex-col h-screen"
+    >
       <Header />
-      <div
-        css={ style1 }
+      <main
+        className="mb-auto px-10"
       >
-        Hover to change color.
-      </div>
-      <div
-        css={ style2 }
-      >
-        Hover to change color.
-      </div>
-      <div
-        css={css`
-          padding: 32px;
-          background-color: hotpink;
-          cursor: pointer;
-          &:hover {
-            font-weight: bold;
-            color: ${color};
+        <div
+          css={ style1 }
+        >
+          Hover to change color.
+        </div>
+        <div
+          css={ style2 }
+        >
+          Hover to change color.
+        </div>
+        <div
+          css={css`
+            padding: 32px;
+            background-color: hotpink;
+            cursor: pointer;
+            &:hover {
+              font-weight: bold;
+              color: ${color};
+            }
+          `}
+        >
+          Hover to change color.
+        </div>
+        <div
+          css={{
+            backgroundColor: 'hotpink',
+            padding: '32px',
+            cursor: 'pointer',
+            '&:hover': {
+              fontWeight: 'bold',
+              color: color,
+            }
           }
-        `}
-      >
-        Hover to change color.
-      </div>
-      <div
-        css={{
-          backgroundColor: 'hotpink',
-          padding: '32px',
-          cursor: 'pointer',
-          '&:hover': {
-            fontWeight: 'bold',
-            color: color,
-          }
-        }
-      }>
-        Hover to change color.
-      </div>
+        }>
+          Hover to change color.
+        </div>
+      </main>
       <Footer>
-        <ol style={{ listStyleType: "number" }}>
+        <ol
+          style={{ listStyleType: "number" }}
+        >
           <li>
             Emotion:<br />
             <a
@@ -84,7 +91,7 @@ const EmotionReact: NextPage = () => {
           </li>
         </ol>
       </Footer>
-    </React.Fragment>
+    </div>
   );
 }
 

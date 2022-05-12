@@ -6,42 +6,47 @@ import Header from '../../modules/examples/Header';
 import Footer from '../../modules/examples/Footer';
 
 const XStatePage: NextPage = () => {
-  const [toggleCurrent, toggleSend] = useMachine(toggleMachine)
+  const [toggleCurrent, toggleSend] = useMachine(toggleMachine);
   const [counterCurrent, counterSend] = useMachine(counterMachine, {
     context: { count: 999 },
-  })
-  const [nextCurrent, nextSend] = useMachine(nextTrafficLightMachine)
+  });
+  const [nextCurrent, nextSend] = useMachine(nextTrafficLightMachine);
 
   return (
-    <>
+    <div
+      className="flex flex-col h-screen"
+    >
       <Header />
-      <Counter
-        counter={{
-          count: counterCurrent.context.count,
-          increment: () => counterSend('INC'),
-          decrement: () => counterSend('DEC'),
-          reset: () => counterSend('RESET'),
-        }}
-      />
-      <hr
-        style={{ margin: '20px 0' }}
-      />
-      <Toggle
-        onToggle={() => toggleSend('TOGGLE')}
-        active={toggleCurrent.matches('active')}
-      />
-      <hr
-        style={{ margin: '20px 0' }}
-      />
-      <TrafficLight
-        onNext={() => nextSend('NEXT')}
-        status={nextCurrent.value}
-      />
-      <hr
-        style={{ margin: '20px 0' }}
-      />
+      <main
+        className="mb-auto px-10"
+      >
+        <Counter
+          counter={{
+            count: counterCurrent.context.count,
+            increment: () => counterSend('INC'),
+            decrement: () => counterSend('DEC'),
+            reset: () => counterSend('RESET'),
+          }}
+        />
+        <hr
+          style={{ margin: '20px 0' }}
+        />
+        <Toggle
+          onToggle={() => toggleSend('TOGGLE')}
+          active={toggleCurrent.matches('active')}
+        />
+        <hr
+          style={{ margin: '20px 0' }}
+        />
+        <TrafficLight
+          onNext={() => nextSend('NEXT')}
+          status={nextCurrent.value}
+        />
+      </main>
       <Footer>
-        <ol style={{ listStyleType: "number" }}>
+        <ol
+          style={{ listStyleType: "number" }}
+        >
           <li>
             Introduction to state machines and statecharts:<br />
             <a
@@ -64,7 +69,7 @@ const XStatePage: NextPage = () => {
           </li>
         </ol>
       </Footer>
-    </>
+    </div>
   )
 }
 

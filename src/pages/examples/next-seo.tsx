@@ -1,12 +1,13 @@
 import type { ReactElement } from 'react';
-import React from 'react';
 import { NextSeo } from 'next-seo';
 import ExampleHome from '../../layouts/examples/ExampleHome';
 import Header from '../../modules/examples/Header';
 import Footer from '../../modules/examples/Footer';
 
 const SEOArticle = () => (
-  <React.Fragment>
+  <div
+    className="flex flex-col h-screen"
+  >
     <NextSeo
       title="Article Page Title"
       description="Description of article page"
@@ -64,10 +65,17 @@ const SEOArticle = () => (
       }}
     />
     <Header />
-    <h1>Article Page SEO</h1>
-    <p>Please view the source code.</p>
+    <main
+      className="mb-auto px-10"
+    >
+      <h1>Article Page SEO</h1>
+      <p>Please view the source code.</p>
+    </main>
     <Footer>
-      <ol className="pl-5" style={{ listStyleType: "number" }}>
+      <ol
+        className="pl-5"
+        style={{ listStyleType: "number" }}
+      >
         <li>
           GitHub:<br />
           <a
@@ -80,7 +88,7 @@ const SEOArticle = () => (
         </li>
       </ol>
     </Footer>
-  </React.Fragment>
+  </div>
 );
 
 SEOArticle.getLayout = function getLayout(page: ReactElement) {

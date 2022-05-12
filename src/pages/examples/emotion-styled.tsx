@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import React, { FC } from 'react';
+import { FC } from 'react';
 import styled from '@emotion/styled';
 import Header from '../../modules/examples/Header';
 import Footer from '../../modules/examples/Footer';
@@ -39,18 +39,26 @@ const StyledComponent1 = styled(Component)<StyledComponentProps>(
 
 const EmotionStyledComponent: NextPage = () => {
   return (
-    <React.Fragment>
+    <div
+      className="flex flex-col h-screen"
+    >
       <Header />
-      <StyledComponent0
-        bgColor="red"
-        label="Component 0"
-      />
-      <StyledComponent1
-        bgColor="red"
-        label="Component 1"
-      />
+      <main
+        className="mb-auto px-10"
+      >
+        <StyledComponent0
+          bgColor="red"
+          label="Component 0"
+        />
+        <StyledComponent1
+          bgColor="red"
+          label="Component 1"
+        />
+      </main>
       <Footer>
-        <ol style={{ listStyleType: "number" }}>
+        <ol
+          style={{ listStyleType: "number" }}
+        >
           <li>
             Emotion:<br />
             <a
@@ -63,7 +71,7 @@ const EmotionStyledComponent: NextPage = () => {
           </li>
         </ol>
       </Footer>
-    </React.Fragment>
+    </div>
   )
 }
 
