@@ -77,7 +77,10 @@ const EmotionReact: NextPage = () => {
       </main>
       <Footer>
         <ol
-          style={{ listStyleType: "number" }}
+          style={{
+            listStyleType: "number"
+          }}
+          className="pl-6"
         >
           <li>
             Emotion:<br />
@@ -85,6 +88,7 @@ const EmotionReact: NextPage = () => {
               href="https://emotion.sh/docs/css-prop"
               target="_blank"
               rel="noreferrer noopener"
+              className="text-blue-600 hover:underline dark:text-blue-500"
             >
               https://emotion.sh/docs/css-prop
             </a>

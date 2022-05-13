@@ -64,7 +64,10 @@ export default function LanguageSwitcherPage1() {
       </main>
       <Footer>
         <ol
-          style={{ listStyleType: "number" }}
+          style={{
+            listStyleType: "number"
+          }}
+          className="pl-6"
         >
           <li>
             next-i18next:<br />
@@ -72,6 +75,7 @@ export default function LanguageSwitcherPage1() {
               href="https://github.com/isaachinman/next-i18next"
               target="_blank"
               rel="noreferrer noopener"
+              className="text-blue-600 hover:underline dark:text-blue-500"
             >
               https://github.com/isaachinman/next-i18next
             </a>

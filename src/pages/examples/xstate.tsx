@@ -45,7 +45,10 @@ const XStatePage: NextPage = () => {
       </main>
       <Footer>
         <ol
-          style={{ listStyleType: "number" }}
+          style={{
+            listStyleType: "number"
+          }}
+          className="pl-6"
         >
           <li>
             Introduction to state machines and statecharts:<br />
@@ -53,6 +56,7 @@ const XStatePage: NextPage = () => {
               href="https://xstate.js.org/docs/guides/introduction-to-state-machines-and-statecharts"
               target="_blank"
               rel="noreferrer noopener"
+              className="text-blue-600 hover:underline dark:text-blue-500"
             >
               https://xstate.js.org/docs/guides/introduction-to-state-machines-and-statecharts
             </a>
@@ -63,6 +67,7 @@ const XStatePage: NextPage = () => {
               href="https://xstate.js.org/docs/guides/typescript.html"
               target="_blank"
               rel="noreferrer noopener"
+              className="text-blue-600 hover:underline dark:text-blue-500"
             >
               https://xstate.js.org/docs/guides/typescript.html
             </a>
