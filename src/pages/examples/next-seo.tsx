@@ -64,7 +64,10 @@ const SEOArticle = () => (
         cardType: 'summary_large_image',
       }}
     />
-    <Header />
+    <Header
+      title="next-seo"
+      description="Next SEO is a plug in that makes managing your SEO easier in Next.js projects."
+    />
     <main
       className="mb-auto px-10"
     >

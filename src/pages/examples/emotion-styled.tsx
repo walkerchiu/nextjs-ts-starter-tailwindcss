@@ -42,7 +42,10 @@ const EmotionStyledComponent: NextPage = () => {
     <div
       className="flex flex-col h-screen"
     >
-      <Header />
+      <Header
+        title="Emotion using styled component"
+        description="styled is a way to create React components that have styles attached to them."
+      />
       <main
         className="mb-auto px-10"
       >

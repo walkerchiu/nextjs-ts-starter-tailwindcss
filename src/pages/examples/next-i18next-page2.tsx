@@ -18,7 +18,10 @@ export default function LanguageSwitcherPage2() {
     <div
       className="flex flex-col h-screen"
     >
-      <Header />
+      <Header
+        title="next-i18next"
+        description="The easiest way to translate your NextJs apps."
+      />
       <main
         className="mb-auto px-10"
       >

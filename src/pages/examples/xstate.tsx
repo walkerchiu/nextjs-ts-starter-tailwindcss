@@ -16,7 +16,10 @@ const XStatePage: NextPage = () => {
     <div
       className="flex flex-col h-screen"
     >
-      <Header />
+      <Header
+        title="XState"
+        description="JavaScript state machines and statecharts."
+      />
       <main
         className="mb-auto px-10"
       >

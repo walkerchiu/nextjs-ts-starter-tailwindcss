@@ -34,7 +34,10 @@ const EmotionReact: NextPage = () => {
     <div
       className="flex flex-col h-screen"
     >
-      <Header />
+      <Header
+        title="Emotion using CSS Prop"
+        description="The primary way to style elements with emotion is the css prop. It provides a concise and flexible API to style your components."
+      />
       <main
         className="mb-auto px-10"
       >
