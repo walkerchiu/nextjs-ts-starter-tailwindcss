@@ -99,16 +99,16 @@ const Home: NextPage = () => {
             <ol style={{ listStyleType: "number" }}>
               <li>
                 <Link
-                  href="/examples/emotion-react"
+                  href="/examples/emotion-css-prop"
                 >
-                  <a>emotion-react</a>
+                  <a>Emotion using CSS Prop</a>
                 </Link>
               </li>
               <li>
                 <Link
                   href="/examples/emotion-styled"
                 >
-                  <a>emotion-styled</a>
+                  <a>Emotion using styled component</a>
                 </Link>
               </li>
             </ol>
