@@ -26,7 +26,7 @@ const Header: FC<ComponentProps> = ({
           Example: { title }
         </p>
         <p
-          className="focus:outline-none font-normal text-sm text-gray-600 mt-1"
+          className="focus:outline-none font-normal text-sm text-gray-600 dark:text-white mt-1"
         >
           { description }
         </p>
@@ -39,7 +39,7 @@ const Header: FC<ComponentProps> = ({
           href="/"
         >
           <a
-            className="focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 focus:outline-none cursor-pointer flex justify-center items-center mx-2 py-2 px-4 rounded hover:bg-yellow-100 text-gray-500"
+            className="focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 focus:outline-none cursor-pointer flex justify-center items-center mx-2 py-2 px-4 rounded text-gray-500 dark:text-white hover:bg-yellow-100 dark:hover:text-slate-900"
           >
             Back
           </a>
@@ -48,7 +48,7 @@ const Header: FC<ComponentProps> = ({
           href="/"
         >
           <a
-            className="focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 focus:outline-none cursor-pointer flex justify-center items-center mx-2 py-2 px-4 rounded hover:bg-yellow-100 text-gray-500"
+            className="focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 focus:outline-none cursor-pointer flex justify-center items-center mx-2 py-2 px-4 rounded text-gray-500 dark:text-white hover:bg-yellow-100 dark:hover:text-slate-900"
           >
             Home
           </a>

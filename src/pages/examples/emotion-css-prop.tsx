@@ -91,7 +91,7 @@ const EmotionReact: NextPage = () => {
               href="https://emotion.sh/docs/css-prop"
               target="_blank"
               rel="noreferrer noopener"
-              className="text-blue-600 hover:underline dark:text-blue-500"
+              className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
             >
               https://emotion.sh/docs/css-prop
             </a>

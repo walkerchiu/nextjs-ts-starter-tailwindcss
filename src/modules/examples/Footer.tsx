@@ -23,7 +23,7 @@ const Footer: FC<ComponentProps> = ({
           Reference
         </p>
         <div
-          className="focus:outline-none font-normal text-gray-600 mt-1"
+          className="focus:outline-none font-normal mt-1 text-gray-600 dark:text-white mt-1"
         >
           { children }
         </div>

@@ -2,12 +2,13 @@ import '../app/styles/globals.css';
 import type { ReactElement } from 'react';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
-import { appWithTranslation } from "next-i18next";
 import React from 'react';
 import SEO from '../../next-seo.config';
-import { DefaultSeo } from 'next-seo';
 import NProgress from 'nprogress';
 import '../app/styles/nprogress.css';
+import { appWithTranslation } from "next-i18next";
+import { DefaultSeo } from 'next-seo';
+import { ThemeProvider } from "next-themes";
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
@@ -20,7 +21,7 @@ type AppPropsWithLayout = AppProps & {
 }
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-  const router = useRouter()
+  const router = useRouter();
 
   useEffect(() => {
     const handleStart = (url: any) => {
@@ -57,7 +58,9 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
           router.pathname === '/dangerously/nofollow-and-noindex'
         }
       />
-      <Component {...pageProps} />
+      <ThemeProvider attribute="class">
+        <Component {...pageProps} />
+      </ThemeProvider>
     </React.Fragment>
   );
 }

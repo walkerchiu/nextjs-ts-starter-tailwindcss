@@ -25,7 +25,12 @@ export default function LanguageSwitcherPage1() {
       <main
         className="mb-auto px-10"
       >
-        <section style={{ textAlign: 'right', paddingRight: '20px' }}>
+        <section
+          style={{
+            textAlign: "right",
+            paddingRight: "20px"
+          }}
+        >
           <Link
             href={router.pathname}
             locale={router.locale === "en-US" ? "zh-TW" : "en-US"}
@@ -34,10 +39,18 @@ export default function LanguageSwitcherPage1() {
           </Link>
         </section>
         <hr
-          style={{ margin: '20px 0' }}
+          style={{
+            margin: "20px 0"
+          }}
         />
         <section>
-          <header style={{ textAlign: 'center' }}>Page 1</header>
+          <header
+            style={{
+              textAlign: "center"
+            }}
+          >
+            Page 1
+          </header>
           {t<string, IndexProps[]>("document.items", { returnObjects: true }).map(
             ({ name, description }, index: number) => (
               <article key={index}>
@@ -48,9 +61,15 @@ export default function LanguageSwitcherPage1() {
           )}
         </section>
         <hr
-          style={{ margin: '20px 0' }}
+          style={{
+            margin: "20px 0"
+          }}
         />
-        <section style={{ textAlign: 'center' }}>
+        <section
+          style={{
+            textAlign: "center"
+          }}
+        >
           Pagination:{' '}
           <Link
             href="/examples/next-i18next-page1"
@@ -78,7 +97,7 @@ export default function LanguageSwitcherPage1() {
               href="https://github.com/isaachinman/next-i18next"
               target="_blank"
               rel="noreferrer noopener"
-              className="text-blue-600 hover:underline dark:text-blue-500"
+              className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
             >
               https://github.com/isaachinman/next-i18next
             </a>

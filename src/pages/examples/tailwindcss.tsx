@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Header from '../../modules/examples/Header';
 import Footer from '../../modules/examples/Footer';
+import ThemeSwitch from '../../modules/examples/providers/ThemeSwitch';
 
 const TailwindCSSPage: NextPage = () => {
   return (
@@ -14,6 +15,12 @@ const TailwindCSSPage: NextPage = () => {
       <main
         className="flex w-full flex-1 flex-col items-center justify-center mt-5 mb-10 px-20 text-center"
       >
+        <div
+          className="w-full flex justify-end mb-5"
+        >
+          <ThemeSwitch />
+        </div>
+
         <h1
           className="text-6xl font-bold"
         >
@@ -31,7 +38,7 @@ const TailwindCSSPage: NextPage = () => {
         >
           <a
             href="https://tailwindcss.com/docs/installation"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
+            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
           >
             <h3
               className="text-2xl font-bold"
@@ -47,7 +54,7 @@ const TailwindCSSPage: NextPage = () => {
 
           <a
             href="https://tailwindui.com"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
+            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
           >
             <h3
               className="text-2xl font-bold"
@@ -63,7 +70,7 @@ const TailwindCSSPage: NextPage = () => {
 
           <a
             href="https://play.tailwindcss.com"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
+            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
           >
             <h3
               className="text-2xl font-bold"
@@ -79,7 +86,7 @@ const TailwindCSSPage: NextPage = () => {
 
           <a
             href="https://tailwindcss.com/resources"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
+            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
           >
             <h3
               className="text-2xl font-bold"
@@ -107,7 +114,7 @@ const TailwindCSSPage: NextPage = () => {
               href="https://tailwindcss.com/docs/utility-first"
               target="_blank"
               rel="noreferrer noopener"
-              className="text-blue-600 hover:underline dark:text-blue-500"
+              className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
             >
               https://tailwindcss.com/docs/utility-first
             </a>
