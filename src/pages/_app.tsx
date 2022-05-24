@@ -7,10 +7,14 @@ import SEO from '../../next-seo.config';
 import NProgress from 'nprogress';
 import '../app/styles/nprogress.css';
 import { appWithTranslation } from "next-i18next";
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import { DefaultSeo } from 'next-seo';
 import { ThemeProvider } from "next-themes";
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+
+config.autoAddCss = false
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => JSX.Element

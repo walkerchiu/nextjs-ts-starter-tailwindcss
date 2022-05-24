@@ -160,6 +160,26 @@ const Home: NextPage = () => {
             </ol>
           </article>
           <article>
+            <h2>Font Awesome</h2>
+            <ol
+              style={{
+                listStyleType: "number"
+              }}
+            >
+              <li>
+                <Link
+                  href="/examples/fontawesome-individually"
+                >
+                  <a
+                    className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                  >
+                    Font Awesome (Individually)
+                  </a>
+                </Link>
+              </li>
+            </ol>
+          </article>
+          <article>
             <h2>TailwindCSS</h2>
             <ol
               style={{
