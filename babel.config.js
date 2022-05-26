@@ -3,7 +3,8 @@ const presets = [
 ];
 
 const plugins = [
-  "@emotion"
+  "@emotion",
+  "macros"
 ];
 
 if (process.env["ENV"] === "prod") {
