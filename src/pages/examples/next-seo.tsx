@@ -1,8 +1,11 @@
 import type { ReactElement } from 'react';
+
 import { NextSeo } from 'next-seo';
+
 import ExampleHome from '../../layouts/examples/ExampleHome';
-import Header from '../../modules/examples/Header';
 import Footer from '../../modules/examples/Footer';
+import Header from '../../modules/examples/Header';
+
 
 const SEOArticle = () => (
   <div

@@ -1,8 +1,10 @@
 import type { NextPage } from 'next';
 import tw from "tailwind-styled-components"
-import Header from '../../modules/examples/Header';
+
 import Footer from '../../modules/examples/Footer';
+import Header from '../../modules/examples/Header';
 import ThemeSwitch from '../../modules/examples/providers/ThemeSwitch';
+
 
 interface ButtonProps {
   $primary: boolean

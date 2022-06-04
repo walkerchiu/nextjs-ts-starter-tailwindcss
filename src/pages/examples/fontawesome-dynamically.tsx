@@ -1,8 +1,10 @@
-import type { NextPage } from 'next';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
-import Header from '../../modules/examples/Header';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import type { NextPage } from 'next';
+
 import Footer from '../../modules/examples/Footer';
+import Header from '../../modules/examples/Header';
+
 
 const FontAwesomeDynamicallyPage: NextPage = () => {
 

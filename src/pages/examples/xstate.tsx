@@ -1,9 +1,11 @@
-import type { NextPage } from 'next';
 import { useMachine } from '@xstate/react';
+import type { NextPage } from 'next';
+
+import Footer from '../../modules/examples/Footer';
+import Header from '../../modules/examples/Header';
 import { Counter, Toggle, TrafficLight } from '../../modules/examples/xstate/components';
 import { counterMachine, toggleMachine, nextTrafficLightMachine } from '../../modules/examples/xstate/machines';
-import Header from '../../modules/examples/Header';
-import Footer from '../../modules/examples/Footer';
+
 
 const XStatePage: NextPage = () => {
   const [toggleCurrent, toggleSend] = useMachine(toggleMachine);

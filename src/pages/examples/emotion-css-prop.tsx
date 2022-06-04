@@ -1,10 +1,12 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 
-import type { NextPage } from 'next';
 import { jsx, css } from '@emotion/react';
-import Header from '../../modules/examples/Header';
+import type { NextPage } from 'next';
+
 import Footer from '../../modules/examples/Footer';
+import Header from '../../modules/examples/Header';
+
 
 const color = 'white';
 

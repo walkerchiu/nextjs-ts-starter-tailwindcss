@@ -1,5 +1,6 @@
 import { createMachine } from 'xstate'
 
+
 type ToggleEvent = { type: "TOGGLE" };
 
 type ToggleState =

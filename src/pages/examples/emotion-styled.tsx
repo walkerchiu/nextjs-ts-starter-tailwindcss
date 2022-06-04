@@ -1,8 +1,11 @@
-import type { NextPage } from 'next';
 import { FC } from 'react';
+
 import styled from '@emotion/styled';
-import Header from '../../modules/examples/Header';
+import type { NextPage } from 'next';
+
 import Footer from '../../modules/examples/Footer';
+import Header from '../../modules/examples/Header';
+
 
 interface ComponentProps {
   className?: string,

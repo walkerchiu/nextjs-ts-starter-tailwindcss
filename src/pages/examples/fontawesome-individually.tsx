@@ -1,10 +1,12 @@
-import type { NextPage } from 'next';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fas, faBell, faQuestion } from '@fortawesome/free-solid-svg-icons';
 import { fab, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { far, faCircle, faHeart } from '@fortawesome/free-regular-svg-icons'
-import Header from '../../modules/examples/Header';
+import { fas, faBell, faQuestion } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import type { NextPage } from 'next';
+
 import Footer from '../../modules/examples/Footer';
+import Header from '../../modules/examples/Header';
+
 
 const FontAwesomeIndividuallyPage: NextPage = () => {
 

@@ -1,18 +1,20 @@
-import '../app/styles/globals.css';
 import type { ReactElement } from 'react';
-import type { NextPage } from 'next';
-import type { AppProps } from 'next/app';
-import React from 'react';
-import SEO from '../../next-seo.config';
-import NProgress from 'nprogress';
-import '../app/styles/nprogress.css';
-import { appWithTranslation } from "next-i18next";
+import React, { useEffect } from 'react';
+
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import type { NextPage } from 'next';
+import { appWithTranslation } from "next-i18next";
 import { DefaultSeo } from 'next-seo';
 import { ThemeProvider } from "next-themes";
-import { useEffect } from 'react';
+import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
+import NProgress from 'nprogress';
+
+import '../app/styles/globals.css';
+import SEO from '../../next-seo.config';
+import '../app/styles/nprogress.css';
+
 
 config.autoAddCss = false
 
@@ -28,7 +30,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const router = useRouter();
 
   useEffect(() => {
-    const handleStart = (url: any) => {
+    const handleStart = (url: string) => {
       console.log(`Loading: ${url}`)
       NProgress.start()
     }
